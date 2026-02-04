@@ -1,7 +1,6 @@
 {
-  "short_name": "meet-your-match",
-  "name": "meet-your-match",
+  "short_name": "Meet Your Match",
+  "name": "Meet Your Match",
   "start_url": ".",
   "display": "standalone"
-
 }

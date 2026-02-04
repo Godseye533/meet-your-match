@@ -1,6 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
+const renderStep = () => {
+  console.log('Current step:', step);  // Add this line
+  if (step === 'intro') {
+    // ... rest of the code
+  }
+  // ... rest of the code
+};
 // EDITABLE: Customize the title and intro text
 const TITLE = "MEET YOUR MATCH — Guided by AI";
 const INTRO_TEXT = "Welcome to an AI-powered psychological compatibility assessment. Answer honestly for the most accurate results. Let's begin.";
