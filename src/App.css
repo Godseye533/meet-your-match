@@ -257,10 +257,10 @@
 .app.round2 { background: linear-gradient(135deg, #FFD700, #FFA500); } /* Golden */
 .app.round3 { background: linear-gradient(135deg, #004D40, #26A69A); } /* Emerald Green */
 .app.interruption {
-  background: url("public/images/warning.gif") no-repeat top center fixed, linear-gradient(135deg, #FF8C00, #FFD700);background-size: 30%; } /* Mustard Yellow */
+  background: url('public/images/warning.gif') no-repeat top center fixed, linear-gradient(135deg, #FF8C00, #FFD700);background-size: 30%; } /* Mustard Yellow */
 .app.message { background: linear-gradient(135deg, #000080, #4169E1); } /* Navy Blue */
 .app.final { 
-  background: url("public/images/spongbobe.gif") no-repeat bottom right fixed, linear-gradient(135deg, #8B0000, #DC143C); 
+  background: url('public/images/spongbobe.gif') no-repeat bottom right fixed, linear-gradient(135deg, #8B0000, #DC143C); 
   background-size: 30%; 
 } /* Deep Red */
 .app.epilogue { background: linear-gradient(135deg, #FFD700, #FFA500); } /* Golden */
