@@ -1,75 +1,349 @@
-/* Minimalist, elegant UI with subtle animations */
+/* Valentine's Day Themed UI with Old Money Colors and Dynamic Changes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
 .app {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Individual Floating Elements - Randomly Placed Single Icons */
+.app .heart1::before,
+.app .gift1::before,
+.app .cupid1::before,
+.app .heart2::before,
+.app .gift2::before,
+.app .cupid2::before,
+.app .heart3::before,
+.app .gift3::before,
+.app .cupid3::before,
+.app .heart4::before,
+.app .gift4::before,
+.app .cupid4::before,
+.app .heart5::before,
+.app .gift5::before,
+.app .cupid5::before,
+.app .heart6::before,
+.app .gift6::before,
+.app .cupid6::before,
+.app .heart7::before,
+.app .gift7::before,
+.app .cupid7::before {
+  position: absolute;
+  pointer-events: none;
+  font-size: 4rem;
+  opacity: 0.8;
+  animation: floatElements 30s linear infinite;
+  z-index: 0;
+}
+
+/* Content and Positions for Each Icon */
+.app .heart1::before { content: '❤️'; top: 10%; left: 20%; animation-delay: 0s; }
+.app .gift1::before { content: '🎁'; top: 30%; left: 70%; animation-delay: 5s; }
+.app .cupid1::before { content: '🏹'; top: 50%; left: 10%; animation-delay: 10s; }
+.app .heart2::before { content: '❤️'; top: 70%; left: 40%; animation-delay: 15s; }
+.app .gift2::before { content: '🎁'; top: 20%; left: 80%; animation-delay: 20s; }
+.app .cupid2::before { content: '🏹'; top: 60%; left: 30%; animation-delay: 25s; }
+.app .heart3::before { content: '❤️'; top: 40%; left: 60%; animation-delay: 30s; }
+.app .gift3::before { content: '🎁'; top: 80%; left: 15%; animation-delay: 35s; }
+.app .cupid3::before { content: '🏹'; top: 15%; left: 50%; animation-delay: 40s; }
+.app .heart4::before { content: '❤️'; top: 55%; left: 85%; animation-delay: 45s; }
+.app .gift4::before { content: '🎁'; top: 35%; left: 5%; animation-delay: 50s; }
+.app .cupid4::before { content: '🏹'; top: 75%; left: 55%; animation-delay: 55s; }
+.app .heart5::before { content: '❤️'; top: 25%; left: 35%; animation-delay: 60s; }
+.app .gift5::before { content: '🎁'; top: 65%; left: 75%; animation-delay: 65s; }
+.app .cupid5::before { content: '🏹'; top: 45%; left: 25%; animation-delay: 70s; }
+.app .heart6::before { content: '❤️'; top: 5%; left: 45%; animation-delay: 75s; }
+.app .gift6::before { content: '🎁'; top: 85%; left: 65%; animation-delay: 80s; }
+.app .cupid6::before { content: '🏹'; top: 35%; left: 90%; animation-delay: 85s; }
+.app .heart7::before { content: '❤️'; top: 55%; left: 15%; animation-delay: 90s; }
+.app .gift7::before { content: '🎁'; top: 25%; left: 55%; animation-delay: 95s; }
+.app .cupid7::before { content: '🏹'; top: 75%; left: 25%; animation-delay: 100s; }
+
+/* Contrasting Colors per Step */
+.app.intro .heart1::before,
+.app.intro .gift1::before,
+.app.intro .cupid1::before,
+.app.intro .heart2::before,
+.app.intro .gift2::before,
+.app.intro .cupid2::before,
+.app.intro .heart3::before,
+.app.intro .gift3::before,
+.app.intro .cupid3::before,
+.app.intro .heart4::before,
+.app.intro .gift4::before,
+.app.intro .cupid4::before,
+.app.intro .heart5::before,
+.app.intro .gift5::before,
+.app.intro .cupid5::before,
+.app.intro .heart6::before,
+.app.intro .gift6::before,
+.app.intro .cupid6::before,
+.app.intro .heart7::before,
+.app.intro .gift7::before,
+.app.intro .cupid7::before { color: #FFD700; } /* Golden on Red */
+
+.app.round1 .heart1::before,
+.app.round1 .gift1::before,
+.app.round1 .cupid1::before,
+.app.round1 .heart2::before,
+.app.round1 .gift2::before,
+.app.round1 .cupid2::before,
+.app.round1 .heart3::before,
+.app.round1 .gift3::before,
+.app.round1 .cupid3::before,
+.app.round1 .heart4::before,
+.app.round1 .gift4::before,
+.app.round1 .cupid4::before,
+.app.round1 .heart5::before,
+.app.round1 .gift5::before,
+.app.round1 .cupid5::before,
+.app.round1 .heart6::before,
+.app.round1 .gift6::before,
+.app.round1 .cupid6::before,
+.app.round1 .heart7::before,
+.app.round1 .gift7::before,
+.app.round1 .cupid7::before { color: #FFD700; } /* Golden on Red */
+
+.app.round2 .heart1::before,
+.app.round2 .gift1::before,
+.app.round2 .cupid1::before,
+.app.round2 .heart2::before,
+.app.round2 .gift2::before,
+.app.round2 .cupid2::before,
+.app.round2 .heart3::before,
+.app.round2 .gift3::before,
+.app.round2 .cupid3::before,
+.app.round2 .heart4::before,
+.app.round2 .gift4::before,
+.app.round2 .cupid4::before,
+.app.round2 .heart5::before,
+.app.round2 .gift5::before,
+.app.round2 .cupid5::before,
+.app.round2 .heart6::before,
+.app.round2 .gift6::before,
+.app.round2 .cupid6::before,
+.app.round2 .heart7::before,
+.app.round2 .gift7::before,
+.app.round2 .cupid7::before { color: #8B0000; } /* Red on Golden */
+
+.app.round3 .heart1::before,
+.app.round3 .gift1::before,
+.app.round3 .cupid1::before,
+.app.round3 .heart2::before,
+.app.round3 .gift2::before,
+.app.round3 .cupid2::before,
+.app.round3 .heart3::before,
+.app.round3 .gift3::before,
+.app.round3 .cupid3::before,
+.app.round3 .heart4::before,
+.app.round3 .gift4::before,
+.app.round3 .cupid4::before,
+.app.round3 .heart5::before,
+.app.round3 .gift5::before,
+.app.round3 .cupid5::before,
+.app.round3 .heart6::before,
+.app.round3 .gift6::before,
+.app.round3 .cupid6::before,
+.app.round3 .heart7::before,
+.app.round3 .gift7::before,
+.app.round3 .cupid7::before { color: #FFD700; } /* Golden on Green */
+
+.app.interruption .heart1::before,
+.app.interruption .gift1::before,
+.app.interruption .cupid1::before,
+.app.interruption .heart2::before,
+.app.interruption .gift2::before,
+.app.interruption .cupid2::before,
+.app.interruption .heart3::before,
+.app.interruption .gift3::before,
+.app.interruption .cupid3::before,
+.app.interruption .heart4::before,
+.app.interruption .gift4::before,
+.app.interruption .cupid4::before,
+.app.interruption .heart5::before,
+.app.interruption .gift5::before,
+.app.interruption .cupid5::before,
+.app.interruption .heart6::before,
+.app.interruption .gift6::before,
+.app.interruption .cupid6::before,
+.app.interruption .heart7::before,
+.app.interruption .gift7::before,
+.app.interruption .cupid7::before { color: #000080; } /* Blue on Yellow */
+
+.app.message .heart1::before,
+.app.message .gift1::before,
+.app.message .cupid1::before,
+.app.message .heart2::before,
+.app.message .gift2::before,
+.app.message .cupid2::before,
+.app.message .heart3::before,
+.app.message .gift3::before,
+.app.message .cupid3::before,
+.app.message .heart4::before,
+.app.message .gift4::before,
+.app.message .cupid4::before,
+.app.message .heart5::before,
+.app.message .gift5::before,
+.app.message .cupid5::before,
+.app.message .heart6::before,
+.app.message .gift6::before,
+.app.message .cupid6::before,
+.app.message .heart7::before,
+.app.message .gift7::before,
+.app.message .cupid7::before { color: #FFD700; } /* Golden on Blue */
+
+.app.final .heart1::before,
+.app.final .gift1::before,
+.app.final .cupid1::before,
+.app.final .heart2::before,
+.app.final .gift2::before,
+.app.final .cupid2::before,
+.app.final .heart3::before,
+.app.final .gift3::before,
+.app.final .cupid3::before,
+.app.final .heart4::before,
+.app.final .gift4::before,
+.app.final .cupid4::before,
+.app.final .heart5::before,
+.app.final .gift5::before,
+.app.final .cupid5::before,
+.app.final .heart6::before,
+.app.final .gift6::before,
+.app.final .cupid6::before,
+.app.final .heart7::before,
+.app.final .gift7::before,
+.app.final .cupid7::before { color: #FFD700; } /* Golden on Red */
+
+.app.epilogue .heart1::before,
+.app.epilogue .gift1::before,
+.app.epilogue .cupid1::before,
+.app.epilogue .heart2::before,
+.app.epilogue .gift2::before,
+.app.epilogue .cupid2::before,
+.app.epilogue .heart3::before,
+.app.epilogue .gift3::before,
+.app.epilogue .cupid3::before,
+.app.epilogue .heart4::before,
+.app.epilogue .gift4::before,
+.app.epilogue .cupid4::before,
+.app.epilogue .heart5::before,
+.app.epilogue .gift5::before,
+.app.epilogue .cupid5::before,
+.app.epilogue .heart6::before,
+.app.epilogue .gift6::before,
+.app.epilogue .cupid6::before,
+.app.epilogue .heart7::before,
+.app.epilogue .gift7::before,
+.app.epilogue .cupid7::before { color: #8B0000; } /* Red on Golden */
+
+@keyframes floatElements {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-20vh) rotate(90deg) scale(1.2); }
+  50% { transform: translateY(-40vh) rotate(180deg) scale(0.8); }
+  75% { transform: translateY(-60vh) rotate(270deg) scale(1.1); }
+  100% { transform: translateY(-80vh) rotate(360deg) scale(1); }
+}
+
+/* Dynamic Backgrounds per Step */
+.app.intro { background: linear-gradient(135deg, #8B0000, #DC143C); } /* Deep Red */
+.app.round1 { background: linear-gradient(135deg, #8B0000, #DC143C); } /* Deep Red */
+.app.round2 { background: linear-gradient(135deg, #FFD700, #FFA500); } /* Golden */
+.app.round3 { background: linear-gradient(135deg, #004D40, #26A69A); } /* Emerald Green */
+.app.interruption { background: linear-gradient(135deg, #FF8C00, #FFD700); } /* Mustard Yellow */
+.app.message { background: linear-gradient(135deg, #000080, #4169E1); } /* Navy Blue */
+.app.final { background: linear-gradient(135deg, #8B0000, #DC143C); } /* Deep Red */
+.app.epilogue { background: linear-gradient(135deg, #FFD700, #FFA500); } /* Golden */
+
 .screen {
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
-  max-width: 600px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  opacity: 5;
-  animation: fadeIn 10s forwards;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FFD700; /* Golden border */
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-.fade-in {
-  animation: fadeIn 1s;
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1, h2 {
+  font-family: 'Playfair Display', serif;
   color: #333;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+
+h1::before { content: '💖 '; }
+h2::before { content: '❤️ '; }
 
 p {
   color: #555;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
 button {
-  background: #007bff;
-  color: white;
+  background: linear-gradient(135deg, #FFD700, #FFA500); /* Golden */
+  color: #333;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 25px;
+  border-radius: 25px;
   cursor: pointer;
-  margin: 5px;
-  transition: background 0.3s;
+  margin: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 button:hover {
-  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 button.selected {
-  background: #28a745;
+  background: linear-gradient(135deg, #8B0000, #DC143C); /* Deep Red */
+  color: white;
 }
+
+/* Dynamic Button Colors per Step */
+.app.round1 button { background: linear-gradient(135deg, #8B0000, #DC143C); }
+.app.round2 button { background: linear-gradient(135deg, #FFD700, #FFA500); }
+.app.round3 button { background: linear-gradient(135deg, #004D40, #26A69A); }
+.app.interruption button { background: linear-gradient(135deg, #FF8C00, #FFD700); }
+.app.message button { background: linear-gradient(135deg, #000080, #4169E1); }
+.app.final button { background: linear-gradient(135deg, #8B0000, #DC143C); }
+.app.epilogue button { background: linear-gradient(135deg, #FFD700, #FFA500); }
 
 .options {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .response {
-  margin-top: 20px;
+  margin-top: 25px;
   font-style: italic;
+  background: rgba(255, 215, 0, 0.1); /* Light golden background */
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #FFD700;
 }
 
 .cursor {
@@ -82,8 +356,11 @@ button.selected {
 }
 
 .processing {
-  font-family: monospace;
+  font-family: 'Courier New', monospace;
   white-space: pre-line;
+  background: rgba(255, 140, 0, 0.1); /* Light yellow background */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .centered {
@@ -93,15 +370,50 @@ button.selected {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
-/* Mobile-friendly */
+/* Luxury Elements */
+.screen::after {
+  content: '🍷 🎁 💑';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+/* Mobile-Friendly */
 @media (max-width: 768px) {
   .screen {
-    padding: 20px;
+    padding: 25px;
+    margin: 10px;
   }
   button {
     width: 100%;
+    padding: 15px;
+  }
+  .app .heart1::before,
+  .app .gift1::before,
+  .app .cupid1::before,
+  .app .heart2::before,
+  .app .gift2::before,
+  .app .cupid2::before,
+  .app .heart3::before,
+  .app .gift3::before,
+  .app .cupid3::before,
+  .app .heart4::before,
+  .app .gift4::before,
+  .app .cupid4::before,
+  .app .heart5::before,
+  .app .gift5::before,
+  .app .cupid5::before,
+  .app .heart6::before,
+  .app .gift6::before,
+  .app .cupid6::before,
+  .app .heart7::before,
+  .app .gift7::before,
+  .app .cupid7::before {
+    font-size: 2.5rem;
   }
 }

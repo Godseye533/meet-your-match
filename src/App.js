@@ -260,7 +260,7 @@ function App() {
     }
   };
 
-  return <div className="app">{renderStep()}</div>;
+  return <div className={`app ${step}`}>{renderStep()}</div>;
 }
 
 export default App;
