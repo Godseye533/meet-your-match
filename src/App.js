@@ -102,18 +102,18 @@ const ROUND3_QUESTIONS = [
 const INTERRUPTION_TEXT = "Processing compatibility data...\n\n[AI Anomaly Detected]\nObjectivity Warning: Emotional bias detected. This match cannot be anonymous. Neutrality protocols failing.";
 
 // EDITABLE: Personal message from the "second participant" (customize for intimacy)
-const PERSONAL_MESSAGE = "This started as something fun, but somewhere along the way, it became about us. You've made these three months unforgettable. Here's to many more.";
+const PERSONAL_MESSAGE = "This started as something fun, but somewhere along the way, it became about us. You've made these past few months unforgettable. I have never been so alive and happy. Here's to many more.";
 
 // EDITABLE: Final ask and button responses
 const FINAL_QUESTION = "Will you be my Valentine?\n(Our first one 🤍)";
 const BUTTONS = [
   { text: "Yes, obviously ❤️", response: "Match Confirmed! Let's make this Valentine's unforgettable. 💕" },
-  { text: "I was waiting for this", response: "Match Confirmed! I've been waiting too. Excited for us. 💕" },
+  { text: "Nooooooo ⚠️", response: "ERROR:404: Match Confirmed! You both are just PERFECT. Excited for both of you. #AI_ne_banadi_JODI💕" },
   { text: "Only if there’s a plan 😌", response: "Match Confirmed! Plan incoming: Dinner, laughs, and us. 💕" }
 ];
 
 // EDITABLE: Optional epilogue for "Yes" selections
-const EPILOGUE = "Valentine's Plan: Cozy dinner at home, followed by our favorite playlist. Can't wait. ❤️";
+const EPILOGUE = "Valentine's Plan: Cozy dinner and wine at home, watching our bonding show. Can't wait. ❤️";
 
 function App() {
   const [step, setStep] = useState('intro'); // Current step: intro, round1, round2, round3, interruption, message, final, epilogue
